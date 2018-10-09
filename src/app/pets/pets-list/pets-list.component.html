@@ -1,0 +1,4 @@
+
+<mat-list>
+  <a mat-list-item [routerLink]="[pet.id]" *ngFor="let pet of pets$ | async">{{pet | json}}</a>
+</mat-list>

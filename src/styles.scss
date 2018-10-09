@@ -1,0 +1,42 @@
+
+@import '~@angular/material/theming';
+@include mat-core();
+//$mat-blue-grey: #AA1728;
+$reibo-red: (
+    50 : #f5e3e5,
+    100 : #e6b9bf,
+    200 : #d58b94,
+    300 : #c45d69,
+    400 : #b73a48,
+    500 : #aa1728,
+    600 : #a31424,
+    700 : #99111e,
+    800 : #900d18,
+    900 : #7f070f,
+    A100 : #ffaeb1,
+    A200 : #ff7b80,
+    A400 : #ff484f,
+    A700 : #ff2f36,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$my-app-primary: mat-palette($reibo-red);
+$my-app-accent: mat-palette($mat-pink, 500, 900, A100);
+$my-app-warn: mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);

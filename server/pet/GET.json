@@ -1,0 +1,92 @@
+[
+  {
+    "id": 0,
+    "category": {
+      "id": 0,
+      "name": "Dog"
+    },
+    "name": "Marshal",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 0,
+        "name": "Dog"
+      }
+    ],
+    "status": "my-pet"
+  },
+  {
+    "id": 1,
+    "category": {
+      "id": 1,
+      "name": "Chicken"
+    },
+    "name": "Choco",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 1,
+        "name": "Chicken"
+      }
+    ],
+    "status": "my-pet"
+  },
+  {
+    "id": 2,
+    "category": {
+      "id": 1,
+      "name": "Chicken"
+    },
+    "name": "Snoepie",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 1,
+        "name": "Chicken"
+      }
+    ],
+    "status": "my-pet"
+  },
+  {
+    "id": 3,
+    "category": {
+      "id": 0,
+      "name": "Dog"
+    },
+    "name": "Kriek",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 0,
+        "name": "Dog"
+      }
+    ],
+    "status": "my-pet"
+  },
+  {
+    "id": 4,
+    "category": {
+      "id": 0,
+      "name": "Turtle"
+    },
+    "name": "Leonardo",
+    "photoUrls": [
+      "string"
+    ],
+    "tags": [
+      {
+        "id": 0,
+        "name": "Turtle"
+      }
+    ],
+    "status": "my-pet"
+  }
+]
