@@ -3,12 +3,23 @@ const fs = require('fs');
 const url = require('url');
 const port = 4000;
 
-http.createServer((request, res) => {
+http
+  .createServer((request, res) => {
     const pathname = url.parse(request.url).pathname;
     let output;
     let responseCode = 200;
+
+    const queryParams = url.parse(request.url, true).query;
+    const queryString = Object.keys(queryParams)
+      .map((key) => `${key}-${queryParams[key]}`)
+      .join('_');
+
     try {
-      output = fs.readFileSync(`./server/${pathname}/${request.method}.json`, 'utf-8');
+      if (queryString) {
+        output = fs.readFileSync(`./server${pathname}/${request.method}_${queryString}.json`, 'utf8');
+      } else {
+        output = fs.readFileSync(`./ server${pathname} /${request.method}.json`, 'utf8');
+      }
       if (output.error) {
         responseCode = 400;
         output = JSON.stringify({ error: output.error });
