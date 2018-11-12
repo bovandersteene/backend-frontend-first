@@ -1,15 +1,16 @@
-const http = require('http');
-const fs = require('fs');
-const url = require('url');
+import * as http from 'http';
+import * as fs from 'fs';
+import * as url from 'url';
 const port = 2000;
 
 http
-  .createServer((request, res) => {
-    const pathname = url.parse(request.url).pathname;
-    let output;
+  .createServer((request: http.IncomingMessage, res: http.ServerResponse) => {
+    const requestUrl: string = request.url || '';
+    const pathname: string = url.parse(requestUrl).pathname || '';
+    let output: any;
     let responseCode = 200;
 
-    const queryParams = url.parse(request.url, true).query;
+    const queryParams = url.parse(requestUrl, true).query;
     const queryString = Object.keys(queryParams)
       .map((key) => `${key}-${queryParams[key]}`)
       .join('_');
